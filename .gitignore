@@ -1,0 +1,31 @@
+# Hugo generated files
+public/
+resources/_gen/
+hugo_stats.json
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Node modules
+node_modules/
+
+# Theme git directories
+themes/*/.git/

@@ -1,0 +1,148 @@
+baseURL = 'https://bazingadyh.github.io/'
+locale = 'zh-CN'
+title = '老登 Blog'
+theme = 'hugo-PaperMod-master'
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+paginate = 10
+
+[params]
+  env = "production"
+  title = "老登 Blog"
+  description = "记录技术成长与生活感悟"
+  author = "douyuhao"
+  keywords = ["Blog", "技术", "生活", "编程"]
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  
+  # 文章显示设置
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  ShowTocLevels = 3
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  
+  # 首页设置
+  homeInfoParams = { Title = "欢迎来到老登 Blog", Content = "记录技术成长与生活感悟" }
+  
+  # 社交链接
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/bazingadyh"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:your@email.com"
+
+[params.assets]
+  favicon = "favicon.ico"
+  favicon16x16 = "favicon-16x16.png"
+  favicon32x32 = "favicon-32x32.png"
+  apple_touch_icon = "apple-touch-icon.png"
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = ["title", "permalink", "summary", "content"]
+
+# 编辑链接
+[params.editPost]
+  URL = "https://github.com/bazingadyh/bazingadyh.github.io/tree/main/content"
+  Text = "建议修改"
+  appendFilePath = true
+
+[params.profileMode]
+  enabled = false
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 3
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 4
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 5
+  [[menu.main]]
+    identifier = "links"
+    name = "友链"
+    url = "/links/"
+    weight = 6
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 7
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# 永久链接格式
+[permalinks]
+  posts = "/:year/:month/:day/:title/"
+
+# Markdown 设置
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    noClasses = false
+    style = "monokai"
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+# 网站地图
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Giscus 评论系统配置
+[params.giscus]
+  enable = true
+  repo = "bazingadyh/bazingadyh.github.io"
+  repoId = "your-repo-id"
+  category = "Announcements"
+  categoryId = "your-category-id"
+  mapping = "pathname"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "top"
+  theme = "light"
+  lang = "zh-CN"
+  loading = "lazy"
